@@ -17,6 +17,9 @@ dependencies:
   sass:
     specifier: ^1.75.0
     version: 1.75.0
+  swiper:
+    specifier: ^11.1.1
+    version: 11.1.1
 
 devDependencies:
   '@types/node':
@@ -409,6 +412,11 @@ packages:
     dependencies:
       client-only: 0.0.1
       react: 18.2.0
+    dev: false
+
+  /swiper@11.1.1:
+    resolution: {integrity: sha512-jGmEA/fNz1lACIcY4/40ggm1Gcyv+EUivmgV/Jd2WFPsEJhbWXnRAwzZR8OPjkBLtDxmzcoYG/iiAMWfRs0YKQ==}
+    engines: {node: '>= 4.7.0'}
     dev: false
 
   /to-regex-range@5.0.1:

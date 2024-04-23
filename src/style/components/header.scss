@@ -1,19 +1,17 @@
+@import "../colors";
 header {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.05);
-    height: 60px;
-    * {
-        transition: all .2s;
-    }
+    height: 56px;
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        button {
+        ._logo {
             border: none;
             background: none;
         }
@@ -26,10 +24,18 @@ header {
             a {
                 font: var(--link-setting);
                 color: var(--link-gray);
+                text-transform: uppercase;
 
                 &:hover {
                 color: var(--link-alt-gray);
                 }
+
+            }
+        }
+        
+        button {
+            &:hover {
+                background-color: $white-100;
             }
         }
     }

@@ -1,4 +1,41 @@
 @font-face {
     font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-Black.woff2') format('woff2');
+    font-weight: 1000;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-Bold.woff2') format('woff2');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Inter';
     src: url('../fonts/Inter/Inter-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-LightBETA.woff2') format('woff2');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Metro-Sans';
+    src: url('../fonts/metro-sans/MetroSans-600.woff2') format('woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Metro-Sans';
+    src: url('../fonts/metro-sans/MetroSans-400.woff2') format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Metro-Sans';
+    src: url('../fonts/metro-sans/MetroSans-200.woff2') format('woff2');
+    font-weight: 200;
 }
