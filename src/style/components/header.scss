@@ -1,0 +1,37 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    height: 60px;
+    * {
+        transition: all .2s;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            border: none;
+            background: none;
+        }
+
+        ._header__nav {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                font: var(--link-setting);
+                color: var(--link-gray);
+
+                &:hover {
+                color: var(--link-alt-gray);
+                }
+            }
+        }
+    }
+    
+}
