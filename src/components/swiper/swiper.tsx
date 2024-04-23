@@ -6,6 +6,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 export const SwiperComponents:FC = ():ReactNode => {
+  const swiperSlideComponent:string[] = [
+    "rnCDe8C.png",
+    "Ax49al8.jpeg",
+    "1K3JXVZ.png",
+    "yuryt7X.png",
+    "UeDOueQ.png",
+    "H9Pe2EC.jpeg"
+  ]
   return (
     
       <Swiper
@@ -22,15 +30,9 @@ export const SwiperComponents:FC = ():ReactNode => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {swiperSlideComponent.map((el:string, id:number)=>(
+          <SwiperSlide key={id}><img src={`https://i.imgur.com/${el}`} alt="slider_photo" /></SwiperSlide>
+        ))}
       </Swiper>
     
   )
