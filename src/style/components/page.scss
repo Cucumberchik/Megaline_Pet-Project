@@ -1,0 +1,26 @@
+@import "../colors";
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ._switch_client {
+        width: 100%;
+        display: flex;
+
+
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 270px;
+
+        img {
+            width: 90%;
+            height: 100%;
+        }
+    }
+}

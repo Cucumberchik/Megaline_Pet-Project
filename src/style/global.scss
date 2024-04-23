@@ -55,3 +55,16 @@ $button-border-radius: 6px;
         background-color: $white-100;
     }
 }
+
+
+.switch_component {
+    width: 300px;
+    height: 40px;
+    
+    ._clients {
+        background-color: $blue-accent;
+    }
+    ._business {
+        background-color: $gray100;
+    }
+}
