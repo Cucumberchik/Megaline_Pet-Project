@@ -9,11 +9,10 @@ export default function Home():ReactNode {
   return (
     <main>
       <div className="container">
-      <TetxtScroll>
-        Gogogl
-      </TetxtScroll>
         <div className="wellcome_div">
-          <h1>Добро пожаловать в megaline</h1>
+          <TetxtScroll>
+              Добро пожаловать в megaline
+          </TetxtScroll>
           <p>Самый лучший интернет провайдер</p>
         </div>
         <div className="_switch_client">
