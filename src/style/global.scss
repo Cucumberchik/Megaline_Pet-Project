@@ -4,6 +4,9 @@
     --font-metor-sans: "Metro-Sans", sans-serif;
     --link-setting: 400 0.87vw / 125% var(--font-inter);
     --font100-setting: 400 0.97vw / 100% var(--font-metor-sans);
+
+    --border-color: #ededed52;
+
 }
 
 * {
@@ -21,7 +24,7 @@
 
 .dark{ 
     background: #2C2C2C;
-
+    --basic-color: white;
     --link-gray: #D9D9D9;
     --link-alt-gray:#fff;
 }
@@ -35,6 +38,7 @@ button, a, input{
 }
 .light {
     background: none;
+    --basic-color: black;
 }
 .container{
     width: 95%;
@@ -56,15 +60,46 @@ $button-border-radius: 6px;
     }
 }
 
-
-.switch_component {
-    width: 300px;
-    height: 40px;
-    
-    ._clients {
-        background-color: $blue-accent;
+.switch_component._clients {
+    ._light{
+        left: 5%;
     }
-    ._business {
-        background-color: $gray100;
+}
+.switch_component._business {
+    ._light{
+        left: 46%;
+        width: 50%;
+        height: 80%;
+    }
+}
+.switch_component {
+    position: relative;
+    transition: all 0.2s ease;
+    width: 180px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 1px;
+    background: none;
+    border: 1.2px solid var(--border-color) ;
+    
+    span {
+        color: white;
+    }
+
+    ._light {
+        transition: .3s;
+        position: absolute;
+        background-color: $blue-accent;
+        width: 40%;
+        height: 80%;
+        border-radius: 50px;
+        right: 0.25rem;
+        left: 0;
+        z-index: -1;
     }
 }

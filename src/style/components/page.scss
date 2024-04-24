@@ -23,4 +23,35 @@ main{
             height: 100%;
         }
     }
+
+    ._news_swiper .swiper-slide {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+
+            ._silde_news {
+                display: flex;
+
+                .title {
+                    width: 70%;
+                    h2 {
+                        color: var(--basic-color);
+
+                        font: 400 22px/ 140% var(--font-metor-sans);
+                    }
+
+                    p {
+                        color: var(--link-gray);
+                        font: 400 16px/ 140% var(--font-metor-sans);
+
+                    }
+                }
+
+                img {
+                    width: 20%;
+                }
+            }
+        }
+    
 }
