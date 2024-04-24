@@ -16,7 +16,7 @@ export const TetxtScroll = ({children}:{children:ReactNode}):ReactNode => {
       
     }
   }, [])
-  
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -36,7 +36,7 @@ export const TetxtScroll = ({children}:{children:ReactNode}):ReactNode => {
       rgba(126, 126, 126, 1) 100%
       );
       background-clip: text;
-      font: 900 50px / 100%  var(--font-metor-sans);
+      font: 900 50px / 100%  var(--font-inter);
       text-transform: uppercase;
   `;
   
