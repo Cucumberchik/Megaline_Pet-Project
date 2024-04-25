@@ -28,6 +28,7 @@
     --basic-black: #080808;
     --link-gray: #D9D9D9;
     --link-alt-gray:#fff;
+    --accent5: #888;
 }
 
 a {
@@ -40,6 +41,7 @@ button, a, input{
 .light {
     background: none;
     --basic-color: black;
+    --accent5: #888;
 }
 .container{
     width: 95%;
@@ -89,8 +91,8 @@ $button-border-radius: 6px;
 .switch_component {
     position: relative;
     transition: all 0.2s ease;
-    width: 180px;
-    height: 40px;
+    width: 250px;
+    height: 50px;
     border-radius: 50px;
     display: flex;
     justify-content: space-evenly;

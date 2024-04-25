@@ -29,7 +29,7 @@ export const Header:FC = ():ReactNode => {
         to: "/сoverage-area"
         },
         {title: "Вопросы и ответы",
-        to: "/FAQ"
+        to: "/faq"
         },
         {title: "",
         to: "/for-clients"
