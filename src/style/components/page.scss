@@ -11,18 +11,39 @@ main{
         height: 95vh;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        
-        ._vertically {
-            height: 100%;
-            width: 0.5px;
-            background: linear-gradient(0deg, rgba(27,27,27,1) 0%, rgba(136,136,136,1) 45%, rgba(27,27,27,1) 100%);
-        }
-        
-        .line_intro_{
-            background-size: 5px;
+        justify-content: center;
+
+        .intros{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
+            width: 95%;
+            height: 80vh;
+
+            .contant{
+                width: 95%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
         }
+        .intro_intro {
+            height: 1px;
+            width:  1px;
+        }
+
+        .verticaly {
+            height: 100%;
+            background: linear-gradient(0deg, $gredient_intro);
+        }
+        .horyzantaly {
+            width: 100%;
+            background: linear-gradient(90deg, $gredient_intro);
+
+        }
+        
         
         ._ercan {
             display: flex;
@@ -32,6 +53,7 @@ main{
             justify-content: space-between;
             position: relative;
             width: 100%;
+            height: 35%;
             
             
             p {
@@ -39,23 +61,31 @@ main{
                 color: var(--link-gray);
                 font-size: 1.5vw;
             }
+
+            
             ._buttons_{
                 display: flex;
-                gap: 10px;
+                justify-content: center;
                 margin-bottom: 10px;
+                width: 100%;
+                position: relative;
 
+
+                ._vertically {
+                    width: .1vw;
+                    height: 100px;
+                }
+                
+                ._contant_buttons {
+                    display: flex;
+                    margin: 10px 0;
+                    gap: 10px;
+                }
+                
                 button {
                     padding: .6vw 1.3vw;
                     font: 500 1.2vw / 150% var(--font-metor-sans);
                 }
-            }
-            
-            ._horizontally {
-                position: absolute;
-                width: 100%;
-                height: .5px;
-                background: linear-gradient(90deg, rgba(27,27,27,1) 0%, rgba(136,136,136,1) 45%, rgba(27,27,27,1) 100%);
-                // border-top: 1px dashed $gray400;
             }
 
             ._top {
@@ -72,7 +102,7 @@ main{
     ._switch_client {
         width: 100%;
         display: flex;
-
+        justify-content: center;
 
     }
 
@@ -88,34 +118,31 @@ main{
         }
     }
 
-    ._news_swiper .swiper-slide {
+    .swiper_wellcome_page{
         width: 100%;
-        height: 80px;
-        display: flex;
-        justify-content: space-between;
-
-            ._silde_news {
-                display: flex;
-
-                .title {
-                    width: 70%;
-                    h2 {
-                        color: var(--basic-color);
-
-                        font: 400 22px/ 140% var(--font-metor-sans);
-                    }
-
-                    p {
-                        color: var(--link-gray);
-                        font: 400 16px/ 140% var(--font-metor-sans);
-
-                    }
-                }
-
-                img {
-                    width: 20%;
-                }
+    }
+    ._news_swiper .swiper-slide {
+        width: 90%;
+        height: 25%;
+        margin-bottom: 10px;
+        p{
+            color: beige;
+            font-size: 14px;
+        }
+        .swiper-slide-active {
+            animation: _parapgraph_wellcome_page 3s ease-in-out;
+        }
+        @keyframes _parapgraph_wellcome_page {
+            from{
+                opacity: 0;
+            };
+            50%, 80%{
+                opacity: 1;
             }
+            to{
+                opacity: 0;
+            }
+        }
     }
 
     
