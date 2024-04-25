@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "~/style/global.scss"
 import { Header } from "~/components/Header/header";
+import { Footer } from "~/components/Footer/footer";
 
 export const metadata: Metadata = {
   title: "Megaline",
@@ -17,6 +18,8 @@ export default function RootLayout({
       <body className="dark">
       <Header />
         {children}
+      <Footer />
+
         </body>
     </html>
   );

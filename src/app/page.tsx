@@ -1,13 +1,14 @@
-import "~/style/components/page.scss"
-import { ReactNode } from 'react'
 
-import { SwiperComponents } from '~/components/swiper/swiper'
-import { SwitchComponent } from '~/components/switch/switchComponent'
+import "~/style/components/page.scss"
+import { ReactNode,} from 'react'
+
 import { SwiperNews } from '~/components/swiper/swiperNews'
 import { TetxtScroll } from '~/components/text/TetxtScroll'
-import { Footer } from "~/components/Footer/footer"
+import { InterfaceComponent } from "~/components/home/interfaceUi"
+
 
 export default function Home():ReactNode {
+
   return (
     <main>
       <div className="container">
@@ -36,18 +37,15 @@ export default function Home():ReactNode {
                     <button className="outline-light-btn">Позвонить</button>
                 </div>
               </div>
-          <div className="intro_intro horyzantaly"/>
-          <div className="swiper_wellcome_page">
-              <SwiperNews />
-          <div className="intro_intro horyzantaly"/>
-          </div>
-              
+              <div className="intro_intro horyzantaly"/>
+              <div className="swiper_wellcome_page">
+                  <SwiperNews />
+              <div className="intro_intro horyzantaly"/>
+            </div>
           </div>
         </div>
-        <div className="_switch_client">
-          <SwitchComponent/>
-        </div>
-      <Footer />
+        <InterfaceComponent />
+        
       </div>
     </main>
   )

@@ -145,5 +145,17 @@ main{
         }
     }
 
+    ._client_page {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        ._backdrop__client_page {
+            width: 100%;
+            height: 50vh;
+        }
+
+    }
     
 }
