@@ -4,7 +4,70 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
+    .wellcome_div {
+        width: 100%;
+        height: 95vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        ._vertically {
+            height: 100%;
+            width: 0.5px;
+            background: linear-gradient(0deg, rgba(27,27,27,1) 0%, rgba(136,136,136,1) 45%, rgba(27,27,27,1) 100%);
+        }
+        
+        .line_intro_{
+            background-size: 5px;
+            
+        }
+        
+        ._ercan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            
+            
+            p {
+                font: var(--link-setting);
+                color: var(--link-gray);
+                font-size: 1.5vw;
+            }
+            ._buttons_{
+                display: flex;
+                gap: 10px;
+                margin-bottom: 10px;
+
+                button {
+                    padding: .6vw 1.3vw;
+                    font: 500 1.2vw / 150% var(--font-metor-sans);
+                }
+            }
+            
+            ._horizontally {
+                position: absolute;
+                width: 100%;
+                height: .5px;
+                background: linear-gradient(90deg, rgba(27,27,27,1) 0%, rgba(136,136,136,1) 45%, rgba(27,27,27,1) 100%);
+                // border-top: 1px dashed $gray400;
+            }
+
+            ._top {
+                top: 0;
+            }
+
+            ._bottom {
+                bottom: 0;
+            }
+            
+        }
+    }
 
     ._switch_client {
         width: 100%;
