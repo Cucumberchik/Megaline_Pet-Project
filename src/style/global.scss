@@ -23,8 +23,9 @@
 
 
 .dark{ 
-    background: #2C2C2C;
+    background: #080808;
     --basic-color: white;
+    --basic-black: #080808;
     --link-gray: #D9D9D9;
     --link-alt-gray:#fff;
 }
@@ -47,7 +48,7 @@ button, a, input{
 $button-border-radius: 6px;
 
 //BUTTON                        
-.blue-btn {
+.ligth-btn {
     padding: 0.6vw 0.5vw;
     border: none;
     border-radius: $button-border-radius;
@@ -55,8 +56,21 @@ $button-border-radius: 6px;
     color: $black-accent;
     font: var(--font100-setting);
 
-    &:focus {
+    &:hover {
         background-color: $white-100;
+    }
+}
+.outline-light-btn {
+    padding: 0.6vw 0.5vw;
+    border: none;
+    border-radius: $button-border-radius;
+    border: 1px solid var(--border-color);
+    background-color: var(--basic-black);
+    color: var(--basic-color);
+    font: var(--font100-setting);
+
+    &:hover {
+        background-color: $gray200;
     }
 }
 

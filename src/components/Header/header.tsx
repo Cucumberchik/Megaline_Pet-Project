@@ -46,7 +46,7 @@ export const Header:FC = ():ReactNode => {
                     <Link href={el.to} key={id}>{el.title}</Link>
                 ))}
             </nav>
-            <button className="_auth_user blue-btn" onClick={()=>route.push('/client')}>
+            <button className="_auth_user ligth-btn" onClick={()=>route.push('/client')}>
                 Вход в личный кабинет
             </button>
         </div>
