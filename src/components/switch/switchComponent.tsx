@@ -3,10 +3,11 @@
 
 import React, { ReactNode, useState, useCallback, memo } from 'react'
 
-export const SwitchComponent = memo(():ReactNode => {
+export const SwitchComponent = memo(({onInterface}:{onInterface:()=>void}):ReactNode => {
     const [status, setStatus] = useState<string>("_clients")
 
     const handleStatus = useCallback(()=>{
+      onInterface()
       setStatus((prev)=>{
         if(prev == "_clients"){
           return "_business"

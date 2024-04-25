@@ -78,13 +78,13 @@ $button-border-radius: 6px;
 
 .switch_component._clients {
     ._light{
-        left: 4%;
+        left: 2%;
     }
 }
 .switch_component._business {
     ._light{
-        left: 46%;
-        width: 50%;
+        left: 45%;
+        width: 53%;
         height: 80%;
     }
 }
@@ -105,13 +105,14 @@ $button-border-radius: 6px;
     
     span {
         color: white;
+        font: 400 17px / 100% var(--font-metor-sans)
     }
 
     ._light {
         transition: .3s;
         position: absolute;
         background-color: $blue-accent;
-        width: 42%;
+        width: 45%;
         height: 80%;
         border-radius: 50px;
         right: 0.25rem;

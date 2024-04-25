@@ -9,6 +9,7 @@ header {
     height: 56px;
     position: fixed;
     z-index: 20;
+    border-bottom: .3px solid rgba(193, 193, 193, 0.193);
     .container {
         display: flex;
         justify-content: space-between;
