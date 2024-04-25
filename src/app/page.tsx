@@ -27,7 +27,7 @@ export default function Home():ReactNode {
               <TetxtScroll>
                   Добро пожаловать в megaline
               </TetxtScroll>
-              <p>Самый лучший интернет провайдер</p>
+              <p>Просто. Выгодно. Надежно</p>
           <div className="intro_intro horyzantaly"/>
 
               <div className="_buttons_">
