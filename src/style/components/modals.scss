@@ -10,7 +10,7 @@
     
 
     ._contant {
-        width: 50%;
+        width: 30%;
         height: 70%;
         margin: auto auto;
         display: flex;
@@ -19,6 +19,8 @@
         .container {
             display: flex;
             flex-direction: column;
+            width: 90%;
+
             ._form_submit_applicatio {
                 display: flex;
                 flex-direction: column;
@@ -33,7 +35,7 @@
                 
                 input {
                     padding: 0 8px;
-                    height: 2vw;
+                    height: 2.2vw;
                     background-color: $gray200;
                     color: $white-default;
                     font: 400 15px / 100% var( --font-inter);    

@@ -7,11 +7,24 @@ type TypeModalSubmitApplication = {
   status: string;
   setChangeStatus:()=>void
 }
+type TypeErrorInputValue = {
+  area: boolean,
+  address: boolean,
+  fio: boolean,
+  phone_number: boolean,
+  email: boolean,
+}
 
 export const ModalSubmitApplication:FC<TypeModalSubmitApplication> = memo(({status, setChangeStatus}):ReactNode => {
-  const [errorValueInputForm, setErrorValueInputForm] = useState<string>('');
+  const [errorValueInputForm, setErrorValueInputForm] = useState<TypeErrorInputValue>({
+    area: false,
+    address: false,
+    fio: false,
+    phone_number: false,
+    email: false,
+  });
   const [valueInputForm, setValueInputForm] = useState<IFormSumbitInputValue>({
-    area: "",
+    area: "DEFAOULT",
     address: "",
     fio:"",
     phone_number: "",
@@ -22,9 +35,17 @@ export const ModalSubmitApplication:FC<TypeModalSubmitApplication> = memo(({stat
   const handleChangeStatus = useCallback(setChangeStatus, [status]);
   const handleFormInputValue = useCallback((e:ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>)=>{
     setValueInputForm({...valueInputForm, [e.target.name]: e.target.value})
-  },[])
+  },[]);
 
-  console.log(valueInputForm);
+  const handleSubmitApplication = () => {
+    if(valueInputForm.area === "DEFAOULT") setErrorValueInputForm({...errorValueInputForm, area: true});
+    if(valueInputForm.address.length < 5) setErrorValueInputForm({...errorValueInputForm, address: true});
+    if(valueInputForm.fio.length < 8) setErrorValueInputForm({...errorValueInputForm, fio: true});
+    if(valueInputForm.phone_number.length < 9) setErrorValueInputForm({...errorValueInputForm, phone_number: true});
+    if(!valueInputForm.email.includes("@")) setErrorValueInputForm({...errorValueInputForm, email: true});
+  }
+
+  
   
 
   return (
@@ -39,7 +60,7 @@ export const ModalSubmitApplication:FC<TypeModalSubmitApplication> = memo(({stat
               <label className="_form_input">
                 Область
                 <select value={valueInputForm.area} onChange={handleFormInputValue} name="area">
-                  <option value="" disabled>Выберите вариант</option>
+                  <option value="DEFAOULT" disabled>Выберите вариант</option>
                   <option value="Чуй">Чуйская область</option>
                   <option value="Иссык-Куль">Иссык-Кульcкая область</option>
                   <option value="Ош">Ошская область</option>
@@ -48,27 +69,27 @@ export const ModalSubmitApplication:FC<TypeModalSubmitApplication> = memo(({stat
               </label>
               <label className="_form_input">
                 Адрес
-                <input onChange={handleFormInputValue} name="address" title="" type="text" placeholder="Адрес.." />
+                <input value={valueInputForm.address} onChange={handleFormInputValue} name="address" title="" type="text" placeholder="Адрес.." />
               </label>
               <label className="_form_input">
                 Фамилия Имя Отчество
-                <input onChange={handleFormInputValue} name="fio" type="text" placeholder="ФИО" />
+                <input value={valueInputForm.fio} onChange={handleFormInputValue} name="fio" type="text" placeholder="ФИО" />
               </label>
               <label className="_form_input">
                 Номер телефона
-                <input onChange={handleFormInputValue} name="phone_number" type="tel" placeholder="+996 000 000 00" />
+                <input value={valueInputForm.phone_number} onChange={handleFormInputValue} name="phone_number" type="number" placeholder="+996 000 000 00" />
               </label>
               <label className="_form_input">
                 Email
-                <input onChange={handleFormInputValue} name="email" type="email" placeholder="exempla@mail.com" />
+                <input value={valueInputForm.email} onChange={handleFormInputValue} name="email" type="email" placeholder="exempla@mail.com" />
               </label>
               <label className="_form_checkbox">
-                <input type="checkbox" onChange={(e)=> setValueInputForm({...valueInputForm, cheked_wifi_router : !!e.target.value})} checked={valueInputForm.cheked_wifi_router} />
+                <input type="checkbox" onChange={(e)=> setValueInputForm({...valueInputForm, cheked_wifi_router : !valueInputForm.cheked_wifi_router })} checked={valueInputForm.cheked_wifi_router} />
                 Мне нужен Wi-Fi роутер
               </label>
               <label >
                 Откуда вы о нас узнали?
-                <select onChange={handleFormInputValue}  name="methods_about" value={valueInputForm.methods_about}>
+                <select onChange={handleFormInputValue}  name="methods_about" defaultValue="не указал">
                   <option value="не указал" disabled selected>Выберите вариант</option>
                   <option value="на телевизоре">Реклама на TV</option>
                   <option value="в интернете">Реклама в интернете</option>
@@ -78,7 +99,8 @@ export const ModalSubmitApplication:FC<TypeModalSubmitApplication> = memo(({stat
                   <option value="знакомые">От знакомых</option>
                 </select>
               </label>
-              <button>Отправить</button>
+              
+              <button onClick={handleSubmitApplication} >Отправить</button>
           </div>
         </div>
       </div>
