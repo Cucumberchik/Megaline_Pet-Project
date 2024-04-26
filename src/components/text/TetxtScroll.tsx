@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 import React, {  ReactNode, useCallback, useEffect, useState } from 'react'
 
-const TextRGBColor = styled.span<{ scrollCount: string }>`
+const TextRGBColor = styled.span<{ $scrollCount: string }>`
   color: transparent;
   background: linear-gradient(
     123deg,
-    rgb(177, 108, 234) ${(props) => 20 + +props.scrollCount}%,
-    rgb(255, 94, 105) ${(props) => 35 + +props.scrollCount}%,
-    rgb(255, 138, 86) ${(props) => 45 + +props.scrollCount}%,
+    rgb(177, 108, 234) ${({$scrollCount}) => 20 + +$scrollCount}%,
+    rgb(255, 94, 105) ${({$scrollCount}) => 35 + +$scrollCount}%,
+    rgb(255, 138, 86) ${({$scrollCount}) => 45 + +$scrollCount}%,
     rgb(255, 168, 75) 100%
   );
   background-clip: text;
@@ -40,12 +40,9 @@ export const TetxtScroll = ({children}:{children:ReactNode}):ReactNode => {
   
   let scrollCount:string = scrolled.toString().split('.')[0];
 
-  
-
-
   if(asyncComponent){
     return (
-      <TextRGBColor scrollCount={scrollCount} >
+      <TextRGBColor $scrollCount={scrollCount} >
         {children}
         </TextRGBColor>
     )

@@ -141,18 +141,64 @@ main{
         }
     }
 
-    ._client_page {
+    ._page {
         width: 100%;
+        height: 60vh;
         display: flex;
         flex-direction: column;
         position: relative;
+        ._light_backdrop {
+            z-index: -1;
+            position: absolute;
+            top: 8vw;
+            left: 0;
+            width: 100%;
+            height: 10vw;
+            background: linear-gradient(123deg,
+            rgb(177, 108, 234) 0%,
+            rgb(255, 94, 105)20%,
+            rgb(255, 138, 86) 60%,
+            rgb(255, 168, 75) 100%
+            );
+
+            border-radius: 60%;
+            filter: blur(60px);
+            }
+        }
+        ._gpon_title {
+            background-color: var(--basic-black);
+            width: 70%;
+            height: 4vw;
+            border: 1px solid rgb($border_style, .5);
+            h2 {
+                color: beige;
+                font: 900 50px/100% var(--font-inter);
+                letter-spacing: 1px;
+              }   
+
+            }
 
         ._backdrop__client_page {
             width: 100%;
             height: 50vh;
-            
-            
-        }
+
+            ._iterface_page {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                @keyframes rotateAntiClockwise {
+                    from {
+                    transform: rotate(0deg); /* Начальное положение - 0 градусов */
+                    }
+                    to {
+                    transform: rotate(-360deg); /* Заключительное положение - -360 градусов (против часовой стрелки) */
+                    }
+                }
+                
+            }
 
     }
     
