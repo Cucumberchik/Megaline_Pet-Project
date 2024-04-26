@@ -1,14 +1,17 @@
-
+"use client"
 import "~/style/components/page.scss"
-import { ReactNode,} from 'react'
+import { ReactNode, useState,} from 'react'
 
 import { SwiperNews } from '~/components/swiper/swiperNews'
 import { TetxtScroll } from '~/components/text/TetxtScroll'
 import { InterfaceComponent } from "~/components/home/interfaceUi"
+import { ModalSubmitApplication } from "~/components/modals/submit_application"
 
 
 export default function Home():ReactNode {
-
+  const [modalSubmitApplicationOpen, setModalSubmitApplicationOpen] = useState<boolean>(false)
+  console.log(modalSubmitApplicationOpen);
+  
   return (
     <main>
       <div className="container">
@@ -33,7 +36,8 @@ export default function Home():ReactNode {
 
               <div className="_buttons_">
                 <div className="_contant_buttons">
-                    <button className="ligth-btn">Оставить заявку</button>
+                    <ModalSubmitApplication status={modalSubmitApplicationOpen} setChangeStatus={()=>setModalSubmitApplicationOpen(false)} />
+                    <button className="ligth-btn" onClick={()=>setModalSubmitApplicationOpen(true)}>Оставить заявку</button>
                     <button className="outline-light-btn">Позвонить</button>
                 </div>
               </div>
