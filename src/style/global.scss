@@ -30,7 +30,10 @@
     --link-alt-gray:#fff;
     --accent5: #888;
 }
-
+img {
+    user-select: none;
+    pointer-events: none;
+}
 a {
     text-decoration: none;
 }

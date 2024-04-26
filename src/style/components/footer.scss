@@ -5,31 +5,44 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
     .footer_links {
         width: 100%;
         display: flex;
         justify-content: space-between;
-    }
-
+    };
     ._footer_link {
         display: flex;
         flex-direction: column;
         gap: 10px;
-    }
+    };
     a h4 {
         color: var(--basic-color);
         font: var(--font100-setting);
-        font-size: 1.5vw;
+        font-size: 1.2vw;
 
     };
     a span {
         color: var(--accent5);
         font: var(--link-setting);
-        font-size: 1.1vw;
+        font-size: 1vw;
         line-height: 130%;
       &:hover {
           color: var(--link-alt-gray);
       }
+    }
+    ._megaline_footer {
+        display: flex;
+        gap: 20px;
+
+        p {
+            color: var(--accent5);
+            font: var(--link-setting);
+        }
     }
 }
