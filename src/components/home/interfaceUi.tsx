@@ -18,7 +18,7 @@ export const InterfaceComponent:FC = memo(():ReactNode => {
           <SwitchComponent onInterface = {()=>handleUiInterface} />
       </div>
       <div className='_client_page'>
-        <Image className="_backdrop__client_page" src={bacdrop_lines} alt="bacdrop_lines" />
+        <Image className="_backdrop__client_page" src={bacdrop_lines} alt="bacdrop_lines" draggable="false" />
         
       </div>
     </>
