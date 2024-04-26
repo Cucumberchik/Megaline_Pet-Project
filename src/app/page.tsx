@@ -9,10 +9,11 @@ import { ModalSubmitApplication } from "~/components/modals/submit_application"
 
 
 export default function Home():ReactNode {
-  const [modalSubmitApplicationOpen, setModalSubmitApplicationOpen] = useState<boolean>(false)
-  console.log(modalSubmitApplicationOpen);
+  const [modalSubmitApplicationOpen, setModalSubmitApplicationOpen] = useState<string>("")
   
   return (
+    <>
+      <ModalSubmitApplication status={modalSubmitApplicationOpen} setChangeStatus={()=>setModalSubmitApplicationOpen("_stop")} />
     <main>
       <div className="container">
         <div className="wellcome_div" >
@@ -36,8 +37,7 @@ export default function Home():ReactNode {
 
               <div className="_buttons_">
                 <div className="_contant_buttons">
-                    <ModalSubmitApplication status={modalSubmitApplicationOpen} setChangeStatus={()=>setModalSubmitApplicationOpen(false)} />
-                    <button className="ligth-btn" onClick={()=>setModalSubmitApplicationOpen(true)}>Оставить заявку</button>
+                    <button className="ligth-btn" onClick={()=>setModalSubmitApplicationOpen("_open")}>Оставить заявку</button>
                     <button className="outline-light-btn">Позвонить</button>
                 </div>
               </div>
@@ -48,9 +48,9 @@ export default function Home():ReactNode {
             </div>
           </div>
         </div>
-        <InterfaceComponent />
-        
+                <InterfaceComponent />
       </div>
     </main>
+    </>
   )
 }
