@@ -45,15 +45,12 @@ export const ModalSubmitApplication:FC<TypeModalSubmitApplication> = memo(({stat
     if(!valueInputForm.email.includes("@")) setErrorValueInputForm({...errorValueInputForm, email: true});
   }
 
-  
-  
-
   return (
     <section id="modal_window_submit_application" 
     className={`modal_window_submit_application${status}`} 
     onClick={handleChangeStatus}>
-      <div className="_contant" onClick={(e )=>e.stopPropagation()}>
-        <div className="container">
+      <div className="_contant" >
+        <div className="container" onClick={(e )=>e.stopPropagation()}>
           <h2>Оставить заявку</h2>
           <h3>После получения заявки наш оператор <br /> свяжется с Вами в ближайшее время (с 9:00 до 21:00).</h3>
           <div className="_form_submit_applicatio">
