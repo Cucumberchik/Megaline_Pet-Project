@@ -3,18 +3,19 @@
 
 import React, { ReactNode, useState, useCallback, memo } from 'react'
 
-export const SwitchComponent = memo(({onInterface}:{onInterface:()=>void}):ReactNode => {
+export const SwitchComponent = memo(({onNavigation}:{onNavigation:()=>void}):ReactNode => {
     const [status, setStatus] = useState<string>("_clients")
 
     const handleStatus = useCallback(()=>{
-      onInterface()
+      onNavigation();
       setStatus((prev)=>{
         if(prev == "_clients"){
           return "_business"
         }
         return "_clients"
       })
-    },[])
+      
+    },[onNavigation])
   return (
     <button className={`switch_component ${status}`} onClick={handleStatus}>
        <span children="Клиентам" />

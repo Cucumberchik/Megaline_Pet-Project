@@ -1,4 +1,22 @@
 @import "../colors";
+@mixin header($state :false) {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+            
+    a {
+        font: var(--link-setting);
+        color: var(--link-gray);
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        white-space: nowrap;
+                
+        &:hover {
+          color: var(--link-alt-gray);
+        }
+                
+    }
+}
 header {
     width: 100%;
     display: flex;
@@ -15,27 +33,27 @@ header {
         justify-content: space-between;
         align-items: center;
 
+        .header_head {
+            display: flex;
+            gap: 5%;
+        }
+
         ._logo {
             border: none;
             background: none;
         }
 
-        ._header__nav {
-            width: 70%;
-            display: flex;
-            justify-content: space-between;
-
-            a {
-                font: var(--link-setting);
-                color: var(--link-gray);
-                text-transform: uppercase;
-
-                &:hover {
-                color: var(--link-alt-gray);
-                }
-
-            }
+        h3,h3 {
+            color: $gray1000;
         }
+        ._header__nav {
+            @include header;
+            transition: 0.1s;
+        }
+         ._header__nav._client {
+            //  @include header;
+            width: 40% ;
+          }
     }
     
 }

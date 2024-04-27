@@ -2,7 +2,7 @@
 :root {
     --font-inter: "Inter", sans-serif;
     --font-metor-sans: "Metro-Sans", sans-serif;
-    --link-setting: 400 0.87vw / 125% var(--font-inter);
+    --link-setting: 400 0.87vw / 125% var(--font-metor-sans);
     --font100-setting: 400 0.97vw / 100% var(--font-metor-sans);
 
     --border-color: #ededed52;
@@ -14,6 +14,11 @@
     padding: 0;
     margin: 0;
   }
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  appearance: none; 
+}
   
   html,
   body {
@@ -94,8 +99,8 @@ $button-border-radius: 6px;
 .switch_component {
     position: relative;
     transition: all 0.2s ease;
-    width: 250px;
-    height: 50px;
+    width: 185px;
+    height: 35px;
     border-radius: 50px;
     display: flex;
     justify-content: space-evenly;
@@ -108,7 +113,7 @@ $button-border-radius: 6px;
     
     span {
         color: white;
-        font: 400 17px / 100% var(--font-metor-sans)
+        font: 400 12px / 100% var(--font-metor-sans)
     }
 
     ._light {
